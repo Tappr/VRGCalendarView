@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/Tappr/VRGCalendarView'
   s.source   = { :git => 'git@github.com:Tappr/VRGCalendarView.git' }
   s.requires_arc = true
+  s.source_files = 'VRGCalendarView/VRGCalendarView.{h,m}'  
 end
 
 
