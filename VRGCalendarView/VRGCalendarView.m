@@ -83,7 +83,6 @@
 #pragma mark - Next & Previous
 -(void)showNextMonth {
     if (isAnimating) return;
-    self.markedDates=nil;
     isAnimating=YES;
     prepAnimationNextMonth=YES;
     
@@ -148,7 +147,6 @@
 -(void)showPreviousMonth {
     if (isAnimating) return;
     isAnimating=YES;
-    self.markedDates=nil;
     //Prepare current screen
     prepAnimationPreviousMonth = YES;
     [self setNeedsDisplay];
@@ -243,9 +241,6 @@
         [self selectDate:date];
         return;
     }
-    
-    self.markedDates=nil;
-    self.markedColors=nil;  
     
     CGRect rectArrowLeft = CGRectMake(0, 0, 50, 40);
     CGRect rectArrowRight = CGRectMake(self.frame.size.width-50, 0, 50, 40);
@@ -484,6 +479,7 @@
         } else if ([markedDateObj isKindOfClass:[NSDate class]]) {
             NSDate *date = (NSDate *)markedDateObj;
             targetDate = [date day];
+            if ([currentMonth month] != [date month]) break;
         } else {
             continue;
         }
