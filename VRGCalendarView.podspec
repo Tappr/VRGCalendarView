@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.license  = 'MIT'
   s.summary  = 'Fancy calendar modified for Tappr'
   s.homepage = 'https://github.com/Tappr/VRGCalendarView'
-  s.source   = { :git => 'git@github.com:Tappr/VRGCalendarView.git' }
+  s.source   = { :git => 'git@github.com:Tappr/VRGCalendarView.git', :tag => "1.0.0" }
   s.requires_arc = true
   s.source_files = 'VRGCalendarView/VRGCalendarView.{h,m}'  
 end
