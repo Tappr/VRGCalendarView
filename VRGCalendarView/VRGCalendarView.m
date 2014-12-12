@@ -479,7 +479,7 @@
         } else if ([markedDateObj isKindOfClass:[NSDate class]]) {
             NSDate *date = (NSDate *)markedDateObj;
             targetDate = [date day];
-            if ([currentMonth month] != [date month]) break;
+            if ([currentMonth month] != [date month]) continue;
         } else {
             continue;
         }
